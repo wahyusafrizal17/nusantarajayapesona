@@ -323,6 +323,17 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   overflow: hidden;
   background: #000;
 }
+.carousel-item{
+  animation: shrink 5s infinite alternate;
+}
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 #hero .carousel-item {
   width: 100%;
   height: calc(100vh - 110px);

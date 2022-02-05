@@ -38,7 +38,7 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
+  {{-- <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -52,7 +52,7 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -105,21 +105,22 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('assets/img/slide/kelapa.jpg');">
+          <div class="carousel-item active" style="background-image: url('assets/img/slider/{{ $sliderA->images }}');">
           </div>
 
-          <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/pisang.jpg');">
+          @foreach ($sliderS as $slider)
+          <div class="carousel-item" style="background-image: url('assets/img/slider/{{ $slider->images }}');">
           </div>
+          @endforeach
 
         </div>
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        {{-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>
         <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
           <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
+        </a> --}}
 
       </div>
     </div>
@@ -264,7 +265,7 @@
         </div>
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
-              <div class="pic"><img src="assets/img/product/kelapa.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/category/kelapa.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>KELAPA</h4>
               </div>
@@ -272,7 +273,7 @@
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
-              <div class="pic"><img src="assets/img/product/pisang.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/category/pisang.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>PISANG</h4>
               </div>
