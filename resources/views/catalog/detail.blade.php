@@ -7,8 +7,8 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2>Product Details</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Product</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ route('category.list', $product->category->slug) }}">Product</a></li>
           <li>{{ $product->name_product }}</li>
         </ol>
       </div>
