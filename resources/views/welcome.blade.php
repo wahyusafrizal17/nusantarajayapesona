@@ -39,7 +39,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
+  {{-- <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">nusantarajayapesona@gmail.com</a>
@@ -52,7 +52,7 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -134,7 +134,7 @@
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/product/kelapa.jpg') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
@@ -164,7 +164,7 @@
 
 
     <!-- ======= Counts Section ======= -->
-    <section class="counts section-bg">
+    {{-- <section class="counts section-bg">
       <div class="container">
 
         <div class="row">
@@ -173,7 +173,7 @@
             <div class="count-box">
               <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <p>Catalog</p>
             </div>
           </div>
 
@@ -204,10 +204,10 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section><!-- End Counts Section --> --}}
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -298,7 +298,7 @@
             <div class="info-box">
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat</p><br>
             </div>
           </div>
 
@@ -306,7 +306,7 @@
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>nusantarajayapesona@gmail.com<br>contact@example.com</p>
+              <p>{{ profile()->email }}</p>
             </div>
           </div>
 
@@ -314,33 +314,8 @@
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>081312221701<br>+1 6678 254445 41</p>
+              <p>{{ profile()->phone }}</p>
             </div>
-          </div>
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
           </div>
 
         </div>

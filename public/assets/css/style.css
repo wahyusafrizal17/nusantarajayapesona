@@ -334,6 +334,14 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     background-size: 100% 100%;
   }
 }
+#hero, #hero .carousel-item {
+  /* height: 120vh; */
+  height: 500px;
+}
+#hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
+  background-size: cover;
+  height: 500px;
+}
 #hero .carousel-item {
   width: 100%;
   height: calc(100vh - 110px);
@@ -450,7 +458,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 @media (max-height: 500px) {
   #hero, #hero .carousel-item {
-    height: 120vh;
+    /* height: 120vh; */
+    height: 200px;
+  }
+  #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
+    background-size: cover;
+    height: 200px;
   }
 }
 @media (min-width: 1024px) {
@@ -548,7 +561,7 @@ section {
   color: #666;
 }
 .about .about-content {
-  padding: 40px;
+  padding: 15px 40px;
 }
 .about .icon-box + .icon-box {
   margin-top: 40px;
