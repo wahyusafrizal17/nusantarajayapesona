@@ -21,7 +21,7 @@ class CreateSettingsTable extends Migration
             $table->string('logo');
             $table->string('link_facebook');
             $table->string('address');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('catalog/{slug}', [App\Http\Controllers\HomeController::class, 'catalog'])->name('category.list');
+Route::get('product/{slug}', [App\Http\Controllers\HomeController::class, 'detail'])->name('catalog.detail');
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('administration')->group(function () {
@@ -29,7 +31,6 @@ Route::middleware(['auth'])->group(function () {
         Route::post('setting/{id}', [App\Http\Controllers\SettingController::class, 'update'])->name('setting.update');
     });
 });
-Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

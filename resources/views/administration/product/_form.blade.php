@@ -18,8 +18,14 @@
     </div>
 
     <div class="form-group">
-        <label for="">Image</label>
-        <input type="file" name="images[]" multiple>
+        <label for="">Image utama</label>
+        {{ Form::file('images', null, ['class' => 'form-control']) }}
+        @if ($errors->has('images')) <span class="help-block" style="color:red">{{ $errors->first('images') }}</span> @endif
+    </div>
+
+    <div class="form-group">
+        <label for="">Sub image</label>
+        <input type="file" name="image[]" multiple>
     </div>
 </div>
 <div class="box-header">

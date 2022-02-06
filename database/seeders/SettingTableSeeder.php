@@ -23,7 +23,7 @@ class SettingTableSeeder extends Seeder
                 'logo' => 'nusantara.png',
                 'link_facebook' => 'https://www.facebook.com/wahyusafrizal74',
                 'address' => 'Bandung', 
-                'description' => 'sample', 
+                'description' => 'NUSANTARA JAYA PESONA has became the biggest Supplier of Coconut Product for local and international markets. we present from best product quality from selected raw material. business is our goal but establishing good relationship with business partners is also our main goal. We believe yhat a good business is a good relationship. therefore, with this company profile, we are always ready to cooperate in the fields that we run.', 
             ]
         );
     }

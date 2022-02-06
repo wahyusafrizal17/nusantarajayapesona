@@ -42,9 +42,18 @@ class ProductController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $product = Product::create($request->all());
+        $input = $request->all();
+        if($request->hasFile('images')){
+            $file = $request->file('images');
+            $fileName = $file->getClientOriginalName();    
+            $destinationPath = 'assets/img/product';
+            $file->move($destinationPath,$file->getClientOriginalName());
+
+            $input['images'] = $fileName;
+        }
+        $product = Product::create($input);
         
-        if($files=$request->file('images')){
+        if($files=$request->file('image')){
             foreach($files as $file){
                 $name = $file->getClientOriginalName();
                 $file->move('assets/img/images',$name);
@@ -94,9 +103,18 @@ class ProductController extends Controller
     public function update(UpdateRequest $request, $id)
     {
         $product = Product::findOrFail($id);
-        $product->update($request->all());
+        $input = $request->all();
+        if($request->hasFile('images')){
+            $file = $request->file('images');
+            $fileName = $file->getClientOriginalName();    
+            $destinationPath = 'assets/img/product';
+            $file->move($destinationPath,$file->getClientOriginalName());
 
-        if($files=$request->file('images')){
+            $input['images'] = $fileName;
+        }
+        $product->update($input);
+
+        if($files=$request->file('image')){
             foreach($files as $file){
                 $name = $file->getClientOriginalName();
                 $file->move('assets/img/images',$name);
