@@ -12,20 +12,28 @@
 
 
         @foreach($products as $product)
-        <div class="col-xl-3 col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up">
-          <div class="member">
+        <div class="col-md-3 text-center mt-5" data-aos="fade-up">
+        <div class="member">
             <div class="pic">
-            <a href="{{ route('catalog.detail', $product->slug) }}">
-                <img src="{{ asset('assets/img/product/'.$product->images) }}" class="img-fluid" alt="">
+              <a href="{{ route('category.list', $product->slug) }}">
+              <img src="{{ asset('assets/img/product/'.$product->images) }}" class="img-fluid" alt="">
             </a>
             </div>
-            <div class="member-info">
-              <h4>{{ $product->name_product }}</h4>
-              <div class="social">
-                <a href=""><i class="bi bi-whatsapp"></i></a>
-              </div>
-            </div>
+            {{-- <div class="member-info">
+              
+            </div> --}}
+            
           </div>
+          <div class="title-product">
+            <h4>{{ $product->name_product}}</h4>
+          </div>
+          
+          <div class="btn-selengkapnya">
+            <a href="{{ route('category.list', $product->slug) }}" class="text-black">
+              Lihat selengkapnya
+            </a>
+          </div>
+          
         </div>
         @endforeach
 

@@ -451,6 +451,19 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #hero .btn-get-started:hover {
   background: #1c5c93;
 }
+@media (max-width: 320px) {
+  .about {
+    padding-bottom: 30px;
+    padding-top: 110px;
+  }
+  .team .member {
+    margin-bottom: 25px !important;
+  }
+  .title-product h4 {
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+}
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 28px;
@@ -548,6 +561,7 @@ section {
 --------------------------------------------------------------*/
 .about {
   padding-bottom: 30px;
+  padding-top: 20;
 }
 .about .container {
   box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
@@ -562,6 +576,7 @@ section {
 }
 .about .about-content {
   padding: 15px 40px;
+  margin-top: -95px;
 }
 .about .icon-box + .icon-box {
   margin-top: 40px;
@@ -992,7 +1007,7 @@ section {
 }
 .team .member {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   position: relative;
 }
 .team .member .pic {
@@ -1001,6 +1016,7 @@ section {
 }
 .team .member img {
   transition: all ease-in-out 0.4s;
+  width: 190px;
 }
 .team .member:hover img {
   transform: scale(1.1);
@@ -1073,6 +1089,27 @@ section {
   font-weight: 600;
   margin-bottom: 15px;
   color: #1f3548;
+}
+
+.title-product{
+  padding-bottom: 15px;
+}
+
+.title-product h4{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.btn-selengkapnya{
+  border: 1px solid;
+  padding: 3px 10px 0px 10px;
+  border-radius: 6px;
+  height: 34px;
+}
+
+.btn-selengkapnya h4{
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------

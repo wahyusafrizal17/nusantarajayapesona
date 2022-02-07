@@ -15,8 +15,8 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['name_category' => 'Kelapa'          , 'slug' => 'kelapa'         , 'images' => 'kelapa.jpg'],
-            ['name_category' => 'Pohon pisang'    , 'slug' => 'pohon-pisang'   , 'images' => 'pisang.jpg'],
+            ['name_category' => 'Kelapa'          , 'slug' => 'kelapa'         , 'images' => 'kelapa.png'],
+            ['name_category' => 'Pisang'          , 'slug' => 'pohon-pisang'   , 'images' => 'pisang.png'],
         ];
         Category::insert($data);
     }

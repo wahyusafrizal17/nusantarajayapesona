@@ -38,9 +38,7 @@
             <div class="mt-3">
                 <p>{!! $product->description !!}</p>
             </div>
-        </div>
-
-        
+        </div> 
 
         <div class="col-lg-4">
           <div class="portfolio-info">

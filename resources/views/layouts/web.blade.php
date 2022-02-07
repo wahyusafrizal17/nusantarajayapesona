@@ -57,9 +57,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#visi">Visi & Misi</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Vision</a></li>
           <li><a class="nav-link scrollto" href="#team">Product</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -94,7 +94,7 @@
           <div class="container">
             <div class="row">
     
-              <div class="col-lg-4 col-md-6 footer-info">
+              <div class="col-md-8 footer-info">
                 <h3>NUSANTARA JAYA PESONA</h3>
                 <p>
                   {{ profile()->address }}<br><br>
@@ -102,26 +102,22 @@
                   <strong>Email:</strong> {{ profile()->email }}<br>
                 </p>
                 <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                  <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  <a href="{{ profile()->link_facebook }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://api.whatsapp.com/send?phone=62{{ substr(profile()->phone,1,20) }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera." class="instagram"><i class="bx bxl-whatsapp"></i></a>
                 </div>
               </div>
+
+              <div class="col-md-4 footer-links">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31688.29313387781!2d107.52361190110491!3d-6.886214575183387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e43e8ebf7617%3A0x501e8f1fc2974e0!2sCimahi%2C%20Kec.%20Cimahi%20Tengah%2C%20Kota%20Cimahi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1644250798754!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
     
-              <div class="col-lg-4 col-md-6 footer-links">
+              {{-- <div class="col-lg-4 col-md-6 footer-links">
                 <h4>PRODUCT</h4>
                 <ul>
                   <li><i class="bx bx-chevron-right"></i> <a href="#">Kelapa</a></li>
                   <li><i class="bx bx-chevron-right"></i> <a href="#">Pisang</a></li>
                 </ul>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 footer-links">
-                <h4>ABOUT</h4>
-                <p>{{ profile()->description }}</p>
-              </div>
+              </div> --}}
     
             </div>
           </div>

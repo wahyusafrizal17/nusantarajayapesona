@@ -15,9 +15,10 @@ class SliderTableSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['images' => 'slide-1.jpg', 'status'  => 'active'],
-            ['images' => 'slide-2.jpg', 'status'  => 'sub active'],
-            ['images' => 'slide-3.jpg', 'status' => 'sub active'],
+            ['images' => 'slide-1.jpeg', 'status'  => 'active'],
+            ['images' => 'slide-2.jpeg', 'status'  => 'sub active'],
+            ['images' => 'slide-3.jpeg', 'status'  => 'sub active'],
+            ['images' => 'slide-4.jpeg', 'status'  => 'sub active'],
         ];
         Slider::insert($data);
     }
