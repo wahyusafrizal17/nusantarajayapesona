@@ -190,15 +190,15 @@
 
         <div class="row">
 
-          <div class="col-lg-6 d-flex" data-aos="fade-up">
+          <div class="col-lg-4 d-flex" data-aos="fade-up">
             <div class="info-box">
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
-              <p>Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat</p><br>
+              <p>{{ profile()->address }}</p>
             </div>
           </div>
 
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
@@ -206,8 +206,8 @@
             </div>
           </div>
 
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-box ">
+          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
               <p>{{ profile()->phone }}</p>

@@ -18,7 +18,7 @@ class SettingTableSeeder extends Seeder
         $user->create(
             [
                 'name'=>'Nusantara Jaya Pesona',
-                'email'=>'nusantarajayapesona@gmail.com',
+                'email'=>'marketing@nusantarajayapesona.com',
                 'phone'=>'081312221701',
                 'logo' => 'nusantara.png',
                 'link_facebook' => 'https://www.facebook.com/wahyusafrizal74',

@@ -15,7 +15,7 @@
         <div class="col-md-3 text-center mt-5" data-aos="fade-up">
         <div class="member">
             <div class="pic">
-              <a href="{{ route('category.list', $product->slug) }}">
+              <a href="{{ route('catalog.detail', $product->slug) }}">
               <img src="{{ asset('assets/img/product/'.$product->images) }}" class="img-fluid" alt="">
             </a>
             </div>
@@ -29,7 +29,7 @@
           </div>
           
           <div class="btn-selengkapnya">
-            <a href="{{ route('category.list', $product->slug) }}" class="text-black">
+            <a href="{{ route('catalog.detail', $product->slug) }}" class="text-black">
               Lihat selengkapnya
             </a>
           </div>
