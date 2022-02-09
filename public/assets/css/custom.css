@@ -8,7 +8,7 @@
     }
     .about {
         padding-bottom: 30px;
-        padding-top: 109px;
+        /* padding-top: 109px; */
     }
     .team .member img {
         transition: all ease-in-out 0.4s;
@@ -18,11 +18,17 @@
         margin-bottom: 22px;
     }
     .title-product h4 {
-        font-size: 15px;
+        font-size: 15px !important;
         font-weight: 600;
     }
+    .btn-selengkapnya {
+        border: 1px solid;
+        padding: 3px 10px 0px 10px;
+        border-radius: 6px;
+        height: 34px;
+    }
     .btn-selengkapnya a{
-        font-size: 12px;
+        font-size: 12px !important;
         font-weight: 600;
     }
     .section-title {
@@ -41,7 +47,7 @@
     }
     .about {
         padding-bottom: 30px;
-        padding-top: 109px;
+        /* padding-top: 109px; */
     }
     .team .member img {
         transition: all ease-in-out 0.4s;
@@ -53,6 +59,12 @@
     .title-product h4 {
         font-size: 20px;
         font-weight: 600;
+    }
+    .btn-selengkapnya {
+        border: 1px solid;
+        padding: 3px 10px 0px 10px;
+        border-radius: 6px;
+        height: 34px;
     }
     .btn-selengkapnya a{
         font-size: 15px;
