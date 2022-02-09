@@ -27,6 +27,7 @@ class StoreRequest extends FormRequest
             'name_product'               => 'required',
             'category_id'                => 'required',
             'description'                => 'required',
+            'images'                     => 'required'
         ];
     }
 
@@ -35,7 +36,8 @@ class StoreRequest extends FormRequest
         return [
             'name_product.required'               => 'Nama product tidak boleh kosong',
             'category_id.required'                => 'Kategori tidak boleh kosong',
-            'description.required'                => 'Deskripsi tidak boleh kosong'
+            'description.required'                => 'Deskripsi tidak boleh kosong',
+            'images.required'                     => 'Gambar tidak boleh kosong'
         ];
     }
 }

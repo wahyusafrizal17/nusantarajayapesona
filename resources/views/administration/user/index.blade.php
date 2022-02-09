@@ -38,7 +38,7 @@
                       <td>{{ $row->name }}</td>
                       <td>{{ $row->email }}</td>
                       <td>
-                          <a href="{{ route('user.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: inline-start;margin-right: 3px;">Edit</a>
+                          <a href="{{ route('user.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: left;margin-right: 3px;">Edit</a>
                           {!! Form::open(['route'=>['user.destroy',$row->id],'method'=>'delete']) !!}
                             <button class="btn btn-danger btn-sm" type="submit">
                                 Delete

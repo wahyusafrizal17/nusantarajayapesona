@@ -27,6 +27,19 @@
         <label for="">Sub image</label>
         <input type="file" name="image[]" multiple>
     </div>
+
+    @if(!empty($product))
+    <div class="form-group row">
+        @foreach($images as $image)
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="{{ asset('assets/img/images/'.$image->images) }}" alt="Card image cap" style="width: 100%">
+                <a href="{{ route('images.destroy', $image->id) }}" class="btn btn-danger btn-sm" style="width: 100%"> <i class="fa fa-trash"></i> </a>
+              </div>
+        </div>
+        @endforeach
+    </div>
+    @endif
 </div>
 <div class="box-header">
     <button type="submit" class="btn btn-success btn-sm">Save</button>

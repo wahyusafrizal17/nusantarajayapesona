@@ -28,7 +28,7 @@
                       <th width="10">No</th>
                       <th>Name category</th>
                       <th>Images</th>
-                      <th width="100">#</th>
+                      <th width="130">#</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -38,7 +38,7 @@
                       <td>{{ $row->name_category }}</td>
                       <td><img src="{{ asset('assets/img/category/'.$row->images) }}" width="100"></td>
                       <td>
-                          <a href="{{ route('category.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: inline-start;margin-right: 3px;">Edit</a>
+                          <a href="{{ route('category.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: left;margin-right: 3px;">Edit</a>
                           {!! Form::open(['route'=>['category.destroy',$row->id],'method'=>'delete']) !!}
                             <button class="btn btn-danger btn-sm" type="submit">
                                 Delete

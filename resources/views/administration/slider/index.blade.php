@@ -38,7 +38,7 @@
                       <td><img src="{{ asset('assets/img/slider/'.$row->images) }}" width="100"></td>
                       <td>{{ $row->status }}</td>
                       <td>
-                          <a href="{{ route('slider.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: inline-start;margin-right: 3px;">Edit</a>
+                          <a href="{{ route('slider.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: left;margin-right: 3px;">Edit</a>
                           {!! Form::open(['route'=>['slider.destroy',$row->id],'method'=>'delete']) !!}
                             <button class="btn btn-danger btn-sm" type="submit">
                                 Delete

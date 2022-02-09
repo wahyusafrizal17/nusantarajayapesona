@@ -8,11 +8,11 @@
         <h2>Our Catalog</h2>
       </div>
 
-      <div class="row mt-5">
+      <div class="row">
 
 
         @foreach($products as $product)
-        <div class="col-md-3 text-center mt-5" data-aos="fade-up">
+        <div class="col-md-3 col-6 text-center mt-5" data-aos="fade-up">
         <div class="member">
             <div class="pic">
               <a href="{{ route('catalog.detail', $product->slug) }}">

@@ -23,14 +23,13 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3>{{ count($products) }}</h3>
 
-              <p>New Orders</p>
+              <p>Product</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -38,14 +37,13 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>{{ count($categories) }}</h3>
 
-              <p>Bounce Rate</p>
+              <p>Category</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -53,29 +51,27 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3>{{ count($users) }}</h3>
 
-              <p>User Registrations</p>
+              <p>User</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-primary">
             <div class="inner">
-              <h3>65</h3>
+              <h3>{{ count($sliders) }}</h3>
 
-              <p>Unique Visitors</p>
+              <p>Slider</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="ion ion-image"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -84,9 +80,9 @@
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
-        <section class="col-lg-12 connectedSortable">
+        <section class="col-lg-12 connectedSortable text-center">
           <!-- Custom tabs (Charts with tabs)-->
-          <div class="nav-tabs-custom">
+          {{-- <div class="nav-tabs-custom">
             <!-- Tabs within a box -->
             <ul class="nav nav-tabs pull-right">
               <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
@@ -95,8 +91,10 @@
               <!-- Morris chart - Sales -->
               <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
             </div>
-          </div>
+          </div> --}}
           <!-- /.nav-tabs-custom -->
+          <br>
+          <h2>NUSANTARA JAYA PESONA</h2>
 
       
 

@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Slider;
 use App\Models\Images;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -37,6 +38,11 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return view('administration.dashboard');
+        $data['products']   = Product::all();
+        $data['categories'] = Category::all();
+        $data['users']      = User::all();
+        $data['sliders']    = Slider::all();
+
+        return view('administration.dashboard', $data);
     }
 }

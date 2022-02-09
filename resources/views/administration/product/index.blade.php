@@ -40,7 +40,7 @@
                       <td>{{ $row->category->name_category }}</td>
                       <td><img src="{{ asset('assets/img/category/'.$row->category->images) }}" width="100"></td>
                       <td>
-                          <a href="{{ route('product.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: inline-start;margin-right: 3px;">Edit</a>
+                          <a href="{{ route('product.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: left;margin-right: 3px;">Edit</a>
                           {!! Form::open(['route'=>['product.destroy',$row->id],'method'=>'delete']) !!}
                             <button class="btn btn-danger btn-sm" type="submit">
                                 Delete

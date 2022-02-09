@@ -90,6 +90,7 @@ class ProductController extends Controller
     {
         $data['category'] = Category::pluck('name_category', 'id');
         $data['product'] = Product::findOrFail($id);
+        $data['images'] = Images::where('product_id', $id)->get();
         return view('administration.product.edit',$data);
     }
 
@@ -119,7 +120,7 @@ class ProductController extends Controller
                 $name = $file->getClientOriginalName();
                 $file->move('assets/img/images',$name);
 
-                $image = Images::where('product_id', $product->id )->first();
+                $image = new Images;
                 $image->product_id = $product->id;
                 $image->images = $name;
                 $image->save();
@@ -142,5 +143,13 @@ class ProductController extends Controller
         $data->delete();
 
         return redirect('administration/product');
+    }
+
+    public function images($id)
+    {
+        $data = Images::findOrFail($id);
+        $data->delete();
+
+        return redirect()->back();
     }
 }

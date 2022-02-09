@@ -1,0 +1,83 @@
+@media(min-width:320px) and (max-width: 400px) {
+    #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
+        background-size: cover;
+        height: 250px;
+    }
+    #hero, #hero .carousel-item {
+        height: 250px;
+    }
+    .about {
+        padding-bottom: 30px;
+        padding-top: 109px;
+    }
+    .team .member img {
+        transition: all ease-in-out 0.4s;
+        width: 100%;
+    }
+    .team .member {
+        margin-bottom: 22px;
+    }
+    .title-product h4 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .btn-selengkapnya a{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .section-title {
+        text-align: center;
+        padding-bottom: 0;
+    }
+}
+
+@media(max-width:480px) {
+    #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
+        background-size: cover;
+        height: 300px;
+    }
+    #hero, #hero .carousel-item {
+        height: 300px;
+    }
+    .about {
+        padding-bottom: 30px;
+        padding-top: 109px;
+    }
+    .team .member img {
+        transition: all ease-in-out 0.4s;
+        width: 100%;
+    }
+    .team .member {
+        margin-bottom: 22px;
+    }
+    .title-product h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .btn-selengkapnya a{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .section-title {
+        text-align: center;
+        padding-bottom: 0;
+    }
+}
+
+@media(min-width:768px) {
+    #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
+        background-size: cover;
+        height: 550px;
+    }
+    #hero, #hero .carousel-item {
+        height: 550px;
+    }
+    .team .member img {
+        transition: all ease-in-out 0.4s;
+        width: 100%;
+    }
+    .title-product h4 {
+        font-size: 19px;
+        font-weight: 600;
+    }
+}

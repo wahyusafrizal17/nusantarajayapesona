@@ -26,6 +26,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('slider', App\Http\Controllers\SliderController::class);
         Route::resource('user', App\Http\Controllers\UserController::class);
         
+        Route::get('images/{id}', [App\Http\Controllers\ProductController::class, 'images'])->name('images.destroy');        
 
         Route::get('setting', [App\Http\Controllers\SettingController::class, 'index'])->name('setting.index');
         Route::post('setting/{id}', [App\Http\Controllers\SettingController::class, 'update'])->name('setting.update');

@@ -29,7 +29,7 @@
                 </div>
 
                 @foreach($images as $image)
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-4">
                         <img src="{{ asset('assets/img/images/'.$image->images) }}" alt="" width="100%">
                     </div>
                 @endforeach

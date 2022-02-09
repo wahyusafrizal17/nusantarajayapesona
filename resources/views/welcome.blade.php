@@ -110,22 +110,22 @@
         </div>
 
         <div class="row mt-6">
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
+          <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="fa fa-american-sign-language-interpreting"></i></div>
             <h4 class="title"><a href="">INTEGRITAS</a></h4>
             <p class="description">Bekerja dengan kualitas yang lebih baik: Pelanggan kami adalah prioritas dengan integritas, kami percaya dapat melayani customer dengan kualitas produk terbaik.</p>
           </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="fa fa-handshake-o"></i></div>
             <h4 class="title"><a href="">KOMITMEN</a></h4>
             <p class="description">Komitmen kami kpeada pemangku kepentingan terkait : Kami sangat peduli dan bersedia membantu mensejahterakan petani, masyarakat dan pemangku kepentingan terkait.</p>
           </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="fa fa-globe"></i></div>
             <h4 class="title"><a href="">SUSTAINBLE</a></h4>
             <p class="description">Kondisi berkelanjutan untuk kehidupan yang lebih baik : Alam sangat penting sehingga kami ingin memastikan generasi berikut nya masih bisa merasakan manfaat nya.</p>
           </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="fa fa-signal"></i></div>
             <h4 class="title"><a href="">GROWTH</a></h4>
             <p class="description">Always grow up to learn : Hingga saat ini dan seterusnya, kami masih belajar meningkatkan suplai kami agar sesuai dan solusi bagi kebutuhan pelanggan.</p>
@@ -149,7 +149,7 @@
         </div>
 
         @foreach($categories as $category)
-          <div class="col-md-3 text-center" data-aos="fade-up">
+          <div class="col-md-3 col-6 text-center" data-aos="fade-up">
             <div class="member">
               <div class="pic">
                 <a href="{{ route('category.list', $category->slug) }}">
