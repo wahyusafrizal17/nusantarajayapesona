@@ -48,8 +48,8 @@
 
           </div>
 
-          <div class="col-lg-6 video-box">
-            <img src="{{ asset('assets/img/product/kelapa.jpg') }}" class="img-fluid" alt="">
+          <div class="col-lg-6 video-box" align="center">
+            <img src="{{ asset('assets/img/product/kelapa.png') }}" class="img-fluid" alt="">
           </div>
         </div>
 
