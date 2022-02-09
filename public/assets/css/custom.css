@@ -1,14 +1,14 @@
 @media(min-width:320px) and (max-width: 400px) {
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
-        height: 250px;
+        height: 250px !important;
     }
     #hero, #hero .carousel-item {
-        height: 250px;
+        height: 250px !important;
     }
     .about {
         padding-bottom: 30px;
-        /* padding-top: 109px; */
+        padding-top: 100px !important;
     }
     .team .member img {
         transition: all ease-in-out 0.4s;
@@ -47,7 +47,7 @@
     }
     .about {
         padding-bottom: 30px;
-        /* padding-top: 109px; */
+        padding-top: 109px;
     }
     .team .member img {
         transition: all ease-in-out 0.4s;
