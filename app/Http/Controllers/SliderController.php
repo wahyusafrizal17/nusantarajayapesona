@@ -15,7 +15,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data['sliders'] = Slider::all();
+        $data['sliders'] = Slider::orderBy('is_active', 'desc')->get();
         return view('administration.slider.index',$data);
     }
 
@@ -125,6 +125,19 @@ class SliderController extends Controller
     {
         $data = Slider::findOrFail($id);
         $data->delete();
+
+        return redirect('administration/slider');
+    }
+
+    public function active($id)
+    {
+        $data = Slider::findOrFail($id);
+        if($data->is_active == 1){
+            $data->is_active = 0;
+        }else{
+            $data->is_active = 1;
+        }
+        $data->save();
 
         return redirect('administration/slider');
     }

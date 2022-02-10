@@ -28,7 +28,7 @@
                       <th width="10">No</th>
                       <th>Images</th>
                       <th>Status</th>
-                      <th width="100">#</th>
+                      <th width="170">#</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -40,11 +40,15 @@
                       <td>
                           <a href="{{ route('slider.edit', $row->id) }}" class="btn btn-primary btn-sm" style="float: left;margin-right: 3px;">Edit</a>
                           {!! Form::open(['route'=>['slider.destroy',$row->id],'method'=>'delete']) !!}
-                            <button class="btn btn-danger btn-sm" type="submit">
+                            <button class="btn btn-danger btn-sm" type="submit" style="float: left;margin-right: 3px;">
                                 Delete
                             </button>
                           {!! Form::close() !!}
-
+                          @if($row->is_active == 1)
+                          <a class="btn btn-warning btn-sm" href="{{ route('slider.active', $row->id) }}">active</a>
+                          @else
+                          <a class="btn btn-warning btn-sm" href="{{ route('slider.active', $row->id) }}">no active</a>
+                          @endif
                       </td>
                     </tr>
                     @endforeach

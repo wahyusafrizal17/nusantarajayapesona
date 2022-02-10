@@ -14,34 +14,34 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['sliderA'] = Slider::where('status', 'Active')->first();
-        $data['sliderS'] = Slider::where('status', 'Sub active')->get();
-        $data['categories'] = Category::all();
+        $data['sliderA'] = Slider::where('status', 'Active')->where('is_active', 1)->first();
+        $data['sliderS'] = Slider::where('status', 'Sub active')->where('is_active', 1)->get();
+        $data['categories'] = Category::where('is_active', 1)->get();
         return view('welcome', $data);
     }
 
     public function catalog($slug)
     {
-        $category = Category::where('slug', $slug)->first();
-        $data['products'] = Product::where('category_id', $category->id)->get();
+        $category = Category::where('slug', $slug)->where('is_active', 1)->first();
+        $data['products'] = Product::where('category_id', $category->id)->where('is_active', 1)->get();
         return view('catalog.index', $data);
     }
 
     public function detail($slug)
     {
-        $data['product'] = Product::where('slug', $slug)->first();
+        $data['product'] = Product::where('slug', $slug->where('is_active', 1))->first();
         $data['images'] = Images::where('product_id', $data['product']->id)->get();
-        $data['catalogs'] = Category::all();
-        $data['products'] = Product::paginate(3);
+        $data['catalogs'] = Category::where('is_active', 1)->get();
+        $data['products'] = Product::where('is_active', 1)->paginate(3);
         return view('catalog.detail', $data);
     }
 
     public function dashboard()
     {
-        $data['products']   = Product::all();
-        $data['categories'] = Category::all();
+        $data['products']   = Product::where('is_active', 1)->get();
+        $data['categories'] = Category::where('is_active', 1)->get();
         $data['users']      = User::all();
-        $data['sliders']    = Slider::all();
+        $data['sliders']    = Slider::where('is_active', 1)->get();
 
         return view('administration.dashboard', $data);
     }

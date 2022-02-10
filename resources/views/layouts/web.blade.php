@@ -104,7 +104,7 @@
                 </p>
                 <div class="social-links mt-3">
                   <a href="{{ profile()->link_facebook }}" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="https://api.whatsapp.com/send?phone=62{{ substr(profile()->phone,1,20) }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera." class="instagram"><i class="bx bxl-whatsapp"></i></a>
+                  <a href="https://api.whatsapp.com/send?phone=62{{ str_replace('-','', substr(profile()->phone,4,20)) }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera." class="instagram"><i class="bx bxl-whatsapp"></i></a>
                 </div>
               </div>
 

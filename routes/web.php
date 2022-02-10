@@ -22,8 +22,11 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('administration')->group(function () {
         Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
         Route::resource('category', App\Http\Controllers\CategoryController::class);
+        Route::get('category/{id}/is_active', [App\Http\Controllers\CategoryController::class, 'active'])->name('category.active');
         Route::resource('product', App\Http\Controllers\ProductController::class);
+        Route::get('product/{id}/is_active', [App\Http\Controllers\ProductController::class, 'active'])->name('product.active');
         Route::resource('slider', App\Http\Controllers\SliderController::class);
+        Route::get('slider/{id}/is_active', [App\Http\Controllers\SliderController::class, 'active'])->name('slider.active');
         Route::resource('user', App\Http\Controllers\UserController::class);
         
         Route::get('images/{id}', [App\Http\Controllers\ProductController::class, 'images'])->name('images.destroy');        

@@ -19,7 +19,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data['products'] = Product::all();
+        $data['products'] = Product::orderBy('is_active', 'desc')->get();
         return view('administration.product.index',$data);
     }
 
@@ -151,5 +151,18 @@ class ProductController extends Controller
         $data->delete();
 
         return redirect()->back();
+    }
+
+    public function active($id)
+    {
+        $data = Product::findOrFail($id);
+        if($data->is_active == 1){
+            $data->is_active = 0;
+        }else{
+            $data->is_active = 1;
+        }
+        $data->save();
+
+        return redirect('administration/product');
     }
 }

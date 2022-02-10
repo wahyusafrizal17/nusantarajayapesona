@@ -17,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data['categories'] = Category::all();
+        $data['categories'] = Category::orderBy('is_active', 'desc')->get();
         return view('administration.category.index',$data);
     }
 
@@ -113,6 +113,19 @@ class CategoryController extends Controller
     {
         $data = Category::findOrFail($id);
         $data->delete();
+
+        return redirect('administration/category');
+    }
+
+    public function active($id)
+    {
+        $data = Category::findOrFail($id);
+        if($data->is_active == 1){
+            $data->is_active = 0;
+        }else{
+            $data->is_active = 1;
+        }
+        $data->save();
 
         return redirect('administration/category');
     }

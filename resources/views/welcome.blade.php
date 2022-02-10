@@ -106,7 +106,7 @@
 
         <div class="section-title mb-5">
           <h2>Vision</h2>
-          <p class="description">Menjadi suplaier buah-buahan segar terbaik di dunia</p>
+          <p class="description">{{ profile()->vision }}</p>
         </div>
 
         <div class="row mt-6">
