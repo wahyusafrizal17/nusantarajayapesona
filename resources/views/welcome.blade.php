@@ -161,7 +161,7 @@
               </div> --}}
               
             </div>
-            <div class="title-product">
+            <div class="title-product title-catalog">
               <h4>{{ $category->name_category }}</h4>
             </div>
             

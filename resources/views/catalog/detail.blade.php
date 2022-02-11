@@ -75,7 +75,7 @@
                     <img src="{{ asset('assets/img/product/'.$row->images) }}" alt="" width="100%">
                   </a>
                 </div>
-                <div class="col-md-8 col-8">
+                <div class="col-md-8 col-8 title-new-product">
                   <a href="{{ route('catalog.detail', $row->slug) }}" class="text-black">
                     {{ $row->name_product }}
                     <p> <i class="fa fa-codepen"></i> {{ $row->category->name_category }}</p>

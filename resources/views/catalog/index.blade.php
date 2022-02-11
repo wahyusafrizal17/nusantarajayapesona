@@ -17,7 +17,7 @@
         <div class="member product">
             <div class="pic">
             <a href="{{ route('catalog.detail', $product->slug) }}">
-              <img src="{{ asset('assets/img/product/'.$product->images) }}" class="img-fluid" alt="">
+              <img src="{{ asset('assets/img/product/'.$product->images) }}" class="img-fluid img-catalog" alt="">
             </a>
             </div>
           </div>

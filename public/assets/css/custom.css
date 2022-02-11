@@ -13,7 +13,9 @@
     .team .member img {
         transition: all ease-in-out 0.4s;
         width: 100%;
-        height: 110px;
+    }
+    .img-catalog{
+        height: 100px;
         object-fit: cover;
     }
     .team .member {
@@ -50,6 +52,16 @@
     .btn-order{
         font-size: 11px;
     }
+    .title-catalog{
+        padding-top: 50px;
+        padding-bottom: 5px;
+    }
+    .title-product {
+        padding-bottom: 0px;
+    }
+    .title-new-product{
+        font-size: 13px;
+    }
 }
 
 @media(max-width:480px) {
@@ -67,6 +79,8 @@
     .team .member img {
         transition: all ease-in-out 0.4s;
         width: 100%;
+    }
+    .img-catalog{
         height: 100px;
         object-fit: cover;
     }
@@ -104,6 +118,8 @@
     .team .member img {
         transition: all ease-in-out 0.4s;
         width: 100%;
+    }
+    .img-catalog{
         height: 180px;
         object-fit: cover;
     }
@@ -119,5 +135,9 @@
     }
     .btn-order{
         font-size: 15px;
+    }
+    .title-catalog{
+        padding-top: 112px;
+        padding-bottom: 10px;
     }
 }
