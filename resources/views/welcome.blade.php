@@ -150,7 +150,7 @@
 
         @foreach($categories as $category)
           <div class="col-md-3 col-6 text-center" data-aos="fade-up">
-            <div class="member">
+            <div class="member product">
               <div class="pic">
                 <a href="{{ route('category.list', $category->slug) }}">
                 <img src="{{ asset('assets/img/category/'.$category->images) }}" class="img-fluid" alt="">
