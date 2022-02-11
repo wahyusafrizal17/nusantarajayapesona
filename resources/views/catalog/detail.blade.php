@@ -35,7 +35,7 @@
                 <hr>
                 @endif
                 @foreach($images as $image)
-                    <div class="col-md-3 col-4 team" style="padding: 20px">
+                    <div class="col-md-3 col-4 team" style="padding: 20px 5px">
                       <div class="member" style="margin-bottom: 0">
                         <div class="pic">
                         <img src="{{ asset('assets/img/images/'.$image->images) }}" class="img-fluid" alt="" width="80%">
@@ -46,8 +46,8 @@
             </div>
             <hr>
             <div>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{url('product/'.$product->slug)}}" target="_blank" class="btn btn-primary"><i class="fa fa-share-alt"></i> Bagikan ke facebook</a>
-              <a href="https://api.whatsapp.com/send?phone=62{{ str_replace('-','', substr(profile()->phone,4,20)) }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20{{ $product->name_product }}." target="_blank" class="btn btn-success"><i class="fa fa-whatsapp"></i> Hubungi supplier</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{url('product/'.$product->slug)}}" target="_blank" class="btn btn-primary btn-order"><i class="fa fa-share-alt"></i> Bagikan ke facebook</a>
+              <a href="https://api.whatsapp.com/send?phone=62{{ str_replace('-','', substr(profile()->phone,4,20)) }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20{{ $product->name_product }}." target="_blank" class="btn btn-success btn-order"><i class="fa fa-whatsapp"></i> Hubungi supplier</a>
             </div>
             <div class="mt-3">
               <strong>Description :</strong>
