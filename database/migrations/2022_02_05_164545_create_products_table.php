@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id');
             $table->text('description');
             $table->string('images');
-            $table->integer('is_active')->nullable();
+            $table->integer('is_active')->nullable()->default('1');
             $table->timestamps();
         });
     }

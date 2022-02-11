@@ -42,9 +42,9 @@ class CategoryController extends Controller
         $input = $request->all();
         if($request->hasFile('images')){
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = $request->name_category.'.'.$file->extension();
             $destinationPath = 'assets/img/category';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
@@ -90,10 +90,14 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $input = $request->all();
         if($request->hasFile('images')){
+            
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = $request->name_category.'.'.$file->extension();   
             $destinationPath = 'assets/img/category';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            if(is_file($destinationPath.'/'.$category->images)){
+            unlink($destinationPath.'/'.$category->images);
+            }
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
@@ -112,6 +116,10 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $data = Category::findOrFail($id);
+        $destinationPath = 'assets/img/category/';
+        if(is_file($destinationPath.'/'.$data->images)){
+        unlink($destinationPath.$data->images);
+        }
         $data->delete();
 
         return redirect('administration/category');

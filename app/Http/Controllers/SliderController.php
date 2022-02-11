@@ -47,9 +47,9 @@ class SliderController extends Controller
         $input = $request->all();
         if($request->hasFile('images')){
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = 'slide-'.date('y-m-d-h-i-s').'.'.$file->extension();     
             $destinationPath = 'assets/img/slider';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
@@ -103,9 +103,12 @@ class SliderController extends Controller
         $input = $request->all();
         if($request->hasFile('images')){
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = 'slide-'.date('y-m-d-h-i-s').'.'.$file->extension();   
             $destinationPath = 'assets/img/slider';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            if(is_file($destinationPath.'/'.$slider->images)){
+                unlink($destinationPath.'/'.$slider->images);
+            }
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
@@ -124,6 +127,10 @@ class SliderController extends Controller
     public function destroy($id)
     {
         $data = Slider::findOrFail($id);
+        $destinationPath = 'assets/img/slider/';
+        if(is_file($destinationPath.'/'.$data->images)){
+        unlink($destinationPath.$data->images);
+        }
         $data->delete();
 
         return redirect('administration/slider');

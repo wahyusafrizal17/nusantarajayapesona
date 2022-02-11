@@ -23,13 +23,19 @@ class HomeController extends Controller
     public function catalog($slug)
     {
         $category = Category::where('slug', $slug)->where('is_active', 1)->first();
+        if(empty($category)){
+            return abort(404);
+        }
         $data['products'] = Product::where('category_id', $category->id)->where('is_active', 1)->get();
         return view('catalog.index', $data);
     }
 
     public function detail($slug)
     {
-        $data['product'] = Product::where('slug', $slug->where('is_active', 1))->first();
+        $data['product'] = Product::where('slug', $slug)->where('is_active', 1)->first();
+        if(empty($data['product'])){
+            return abort(404);
+        }
         $data['images'] = Images::where('product_id', $data['product']->id)->get();
         $data['catalogs'] = Category::where('is_active', 1)->get();
         $data['products'] = Product::where('is_active', 1)->paginate(3);

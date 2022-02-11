@@ -1011,6 +1011,7 @@ section {
   text-align: center;
   margin-bottom: 40px;
   position: relative;
+  height: 200px;
 }
 .team .member .pic {
   border-radius: 4px;

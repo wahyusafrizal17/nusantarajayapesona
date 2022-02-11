@@ -45,23 +45,26 @@ class ProductController extends Controller
         $input = $request->all();
         if($request->hasFile('images')){
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = Str::slug($request->name_product).'.'.$file->extension();   
             $destinationPath = 'assets/img/product';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
         $product = Product::create($input);
         
         if($files=$request->file('image')){
+            $no = 1;
             foreach($files as $file){
-                $name = $file->getClientOriginalName();
+                $name = 'image-'.$no.'-'.date('y-m-d-h-i-s').'.'.$file->extension();
                 $file->move('assets/img/images',$name);
 
                 $image = new Images;
                 $image->product_id = $product->id;
                 $image->images = $name;
                 $image->save();
+
+                $no++;
             }
         }
 
@@ -107,23 +110,29 @@ class ProductController extends Controller
         $input = $request->all();
         if($request->hasFile('images')){
             $file = $request->file('images');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = Str::slug($request->name_product).'.'.$file->extension();    
             $destinationPath = 'assets/img/product';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            if(is_file($destinationPath.'/'.$product->images)){
+            unlink($destinationPath.'/'.$product->images);
+            }
+            $file->move($destinationPath,$fileName);
 
             $input['images'] = $fileName;
         }
         $product->update($input);
 
         if($files=$request->file('image')){
+            $no = 1;
             foreach($files as $file){
-                $name = $file->getClientOriginalName();
+                $name = 'image-'.$no.'-'.date('y-m-d-h-i-s').'.'.$file->extension();
                 $file->move('assets/img/images',$name);
 
                 $image = new Images;
                 $image->product_id = $product->id;
                 $image->images = $name;
                 $image->save();
+
+                $no++;
             }
         }
 
@@ -140,6 +149,10 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $data = Product::findOrFail($id);
+        $destinationPath = 'assets/img/product/';
+        if(is_file($destinationPath.'/'.$data->images)){
+        unlink($destinationPath.$data->images);
+        }
         $data->delete();
 
         return redirect('administration/product');
@@ -148,6 +161,8 @@ class ProductController extends Controller
     public function images($id)
     {
         $data = Images::findOrFail($id);
+        $destinationPath = 'assets/img/images/';
+        unlink($destinationPath.$data->images);
         $data->delete();
 
         return redirect()->back();
