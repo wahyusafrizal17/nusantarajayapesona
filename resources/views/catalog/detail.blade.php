@@ -23,7 +23,7 @@
 
         <div class="col-lg-8">
             <h3>{{ $product->name_product }}</h3>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12 team" style="padding: 0px">
                   <div class="member" style="margin-bottom: 0">
                     <div class="pic">
@@ -43,7 +43,36 @@
                       </div>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
+            <section id="hero">
+              <div class="hero-container">
+                <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+          
+                  <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+          
+                  <div class="carousel-inner" role="listbox">
+          
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active img-detail-slide" style="background-image: url('/assets/img/product/{{ $product->images }}');">
+                    </div>
+          
+                    @foreach($images as $image)
+                    <div class="carousel-item img-detail-slide" style="background-image: url('/assets/img/images/{{ $image->images }}');">
+                    </div>
+                    @endforeach
+          
+                  </div>
+          
+                  <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                  </a>
+          
+                </div>
+              </div>
+            </section>
             <hr>
             <div>
               <a href="https://www.facebook.com/sharer/sharer.php?u={{url('product/'.$product->slug)}}" target="_blank" class="btn btn-primary btn-order"><i class="fa fa-share-alt"></i> Bagikan ke facebook</a>
