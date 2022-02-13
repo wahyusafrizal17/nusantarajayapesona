@@ -79,9 +79,9 @@
         height: auto;
     }
     .title-logo{
-        font-size: 15px !important;
+        font-size: 16px !important;
         position: absolute;
-        top: 21px !important;
+        top: 11px !important;
         left: 64px !important;
     }
 }
@@ -128,9 +128,9 @@
         padding-bottom: 0;
     }
     .title-logo{
-        font-size: 19px;
+        font-size: 21px !important;
         position: absolute;
-        top: 26px;
+        top: 16px;
         left: 64px;
     }
 }
@@ -180,9 +180,8 @@
         padding-bottom: 10px;
     }
     .title-logo{
-        font-size: 15px;
         position: absolute;
-        top: 24px;
-        left: 126px;
+        top: 11px;
+        left: 130px;
     }
 }
