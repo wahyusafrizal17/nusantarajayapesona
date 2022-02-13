@@ -181,7 +181,7 @@
     }
     .title-logo{
         position: absolute;
-        top: 11px;
-        left: 130px;
+        top: 14px !important;
+        left: 130px !important;
     }
 }
