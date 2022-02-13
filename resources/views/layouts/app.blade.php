@@ -40,7 +40,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg">{{ profile()->name }}</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -56,7 +56,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{ asset('assets/img/logo/'.profile()->logo) }}" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -64,8 +64,8 @@
                 <img src="{{ asset('assets/img/logo/'.profile()->logo) }}" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  {{ Auth::user()->name }}
+                  <small>{{ Auth::user()->email }}</small>
                 </p>
               </li>
               <!-- Menu Footer-->
@@ -127,6 +127,7 @@
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li> --}}
+        <li><a href="{{ route('about.index') }}"><i class="fa fa-inbox"></i> <span>About</span></a></li>
         <li><a href="{{ route('category.index') }}"><i class="fa fa-codepen"></i> <span>Category</span></a></li>
         <li><a href="{{ route('product.index') }}"><i class="fa fa-dropbox"></i> <span>Product</span></a></li>
         <li><a href="{{ route('slider.index') }}"><i class="fa fa-image"></i> <span>Slider</span></a></li>
@@ -142,9 +143,9 @@
  <!-- /.content-wrapper -->
  <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.18
+      <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+    <strong>Copyright &copy; {{ date('Y') }} <a href="http://nusantarajayapesona.com/">{{ profile()->name }}</a>.</strong> All rights
     reserved.
   </footer>
 

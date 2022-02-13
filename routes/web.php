@@ -21,6 +21,10 @@ Route::get('product/{slug}', [App\Http\Controllers\HomeController::class, 'detai
 Route::middleware(['auth'])->group(function () {
     Route::prefix('administration')->group(function () {
         Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+
+        Route::get('about', [App\Http\Controllers\AboutUsController::class, 'index'])->name('about.index');
+        Route::post('about/{id}', [App\Http\Controllers\AboutUsController::class, 'update'])->name('about.update');
+
         Route::resource('category', App\Http\Controllers\CategoryController::class);
         Route::get('category/{id}/is_active', [App\Http\Controllers\CategoryController::class, 'active'])->name('category.active');
         Route::resource('product', App\Http\Controllers\ProductController::class);

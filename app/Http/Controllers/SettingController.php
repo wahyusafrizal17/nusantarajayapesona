@@ -21,9 +21,12 @@ class SettingController extends Controller
 
         if($request->hasFile('logo')){
             $file = $request->file('logo');
-            $fileName = $file->getClientOriginalName();    
+            $fileName = 'logo-'.date('y-m-d-h-i-s').'.'.$file->extension();    
             $destinationPath = 'assets/img/logo';
-            $file->move($destinationPath,$file->getClientOriginalName());
+            if(is_file($destinationPath.'/'.$setting->logo)){
+                unlink($destinationPath.'/'.$setting->logo);
+            }
+            $file->move($destinationPath,$fileName);
 
             $input['logo']         = $fileName;
         }

@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Slider;
 use App\Models\Images;
 use App\Models\User;
+use App\Models\AboutUs;
 
 class HomeController extends Controller
 {

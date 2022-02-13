@@ -68,6 +68,13 @@
                               </div>
 
                               <div class="form-group">
+                                <label for="inputName" class="col-sm-2 control-label">Vision</label>
+                                <div class="col-sm-10">
+                                  {{ Form::text('vision', null, ['class' => 'form-control']) }}
+                                </div>
+                              </div>
+
+                              <div class="form-group">
                                 <label for="inputSkills" class="col-sm-2 control-label">Link facebook</label>
                                 <div class="col-sm-10">
                                     {{ Form::text('link_facebook', null, ['class' => 'form-control']) }}

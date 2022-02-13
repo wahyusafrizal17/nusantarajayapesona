@@ -19,6 +19,6 @@
     
 </div>
 <div class="box-header">
-    <button type="submit" class="btn btn-success btn-sm">Save</button>
+    <button type="submit" class="btn btn-success btn-sm">Submit</button>
     <a href="{{ route('user.index') }}" class="btn btn-primary btn-sm">Back</a>
 </div>

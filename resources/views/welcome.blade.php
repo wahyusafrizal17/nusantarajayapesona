@@ -43,13 +43,13 @@
 
             <div class="section-title">
               <h2>About Us</h2>
-              <p>NUSANTARA JAYA PESONA has became the biggest Supplier of Coconut Product for local and international markets. we present from best product quality from selected raw material. business is our goal but establishing good relationship with business partners is also our main goal. We believe yhat a good business is a good relationship. therefore, with this company profile, we are always ready to cooperate in the fields that we run.</p>
+              <p>{{ about()->description }}</p>
             </div>
 
           </div>
 
           <div class="col-lg-6 video-box" align="center">
-            <img src="{{ asset('assets/img/product/about.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/about/'.about()->images ) }}" class="img-fluid" alt="">
           </div>
         </div>
 
@@ -145,9 +145,7 @@
 
 
         <div class="row">
-        <div class="col-md-3">
-        </div>
-
+        <div class="col-md-3"></div>
         @foreach($categories as $category)
           <div class="col-md-3 col-6 text-center" data-aos="fade-up">
             <div class="member product">
@@ -156,25 +154,19 @@
                 <img src="{{ asset('assets/img/category/'.$category->images) }}" class="img-fluid" alt="">
               </a>
               </div>
-              {{-- <div class="member-info">
-                
-              </div> --}}
-              
             </div>
             <div class="title-product title-catalog">
               <h4>{{ $category->name_category }}</h4>
             </div>
-            
             <div class="btn-selengkapnya">
               <a href="{{ route('category.list', $category->slug) }}" class="text-black">
                 Lihat selengkapnya
               </a>
             </div>
-            
           </div>
           @endforeach
-          <div class="col-md-3">
-          </div>
+          <div class="col-md-3"></div>
+
         </div>
 
       </div>

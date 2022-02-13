@@ -78,6 +78,12 @@
         width: auto;
         height: auto;
     }
+    .title-logo{
+        font-size: 15px !important;
+        position: absolute;
+        top: 21px !important;
+        left: 64px !important;
+    }
 }
 
 @media(max-width:480px) {
@@ -121,9 +127,18 @@
         text-align: center;
         padding-bottom: 0;
     }
+    .title-logo{
+        font-size: 19px;
+        position: absolute;
+        top: 26px;
+        left: 64px;
+    }
 }
 
 @media(min-width:768px) {
+    .detail-catalog{
+        height: 420px !important;
+    }
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 600px;
@@ -133,11 +148,11 @@
     }
     #hero .carousel-inner .img-detail-slide, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
-        height: 420px;
+        height: 420px !important;
         object-fit: cover;
     }
     #hero .img-detail-slide {
-        height: 420px;
+        height: 420px !important;
     }
     .team .member img {
         transition: all ease-in-out 0.4s;
@@ -163,5 +178,11 @@
     .title-catalog{
         padding-top: 112px;
         padding-bottom: 10px;
+    }
+    .title-logo{
+        font-size: 25px;
+        position: absolute;
+        top: 24px;
+        left: 126px;
     }
 }

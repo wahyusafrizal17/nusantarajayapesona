@@ -7,4 +7,11 @@ function profile()
     return $setting;
 }
 
+function about()
+{
+    $about = App\Models\AboutUs::find(1);
+
+    return $about;
+}
+
 ?>

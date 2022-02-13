@@ -44,7 +44,7 @@
                     </div>
                 @endforeach
             </div> --}}
-            <section id="hero">
+            <section id="hero" class="detail-catalog">
               <div class="hero-container">
                 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
           
