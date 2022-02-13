@@ -1,4 +1,4 @@
-@media(min-width:250px) and (max-width: 400px) {
+@media(min-width:250px) and (max-width: 479px) {
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 250px !important;
@@ -86,7 +86,7 @@
     }
 }
 
-@media(max-width:480px) {
+@media(min-width:480px) and (max-width: 767px) {
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 300px;
