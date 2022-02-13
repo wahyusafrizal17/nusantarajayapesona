@@ -54,7 +54,7 @@
         <h1>
           <a href="/">
             <img src="{{ asset('assets/img/logo/nusantara.png') }}" alt="">
-            <h1 class="title-logo">NUSANTARA JAYA PESONA</h1>
+            {{-- <h1 class="title-logo">NUSANTARA JAYA PESONA</h1> --}}
           </a>
         </h1>
         <!-- Uncomment below if you prefer to use an image logo -->
