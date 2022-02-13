@@ -1,4 +1,4 @@
-@media(min-width:300px) {
+@media(min-width:200px) {
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 250px !important;
