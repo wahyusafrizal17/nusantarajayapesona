@@ -41,6 +41,9 @@
         </div>
         @endif
 
+        <div class="col-md-12 mt-5">
+            {{ $products->render("pagination::bootstrap-4") }}
+        </div>
       </div>
 
     </div>

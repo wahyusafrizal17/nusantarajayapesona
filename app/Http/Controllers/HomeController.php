@@ -27,7 +27,7 @@ class HomeController extends Controller
         if(empty($category)){
             return abort(404);
         }
-        $data['products'] = Product::where('category_id', $category->id)->where('is_active', 1)->get();
+        $data['products'] = Product::where('category_id', $category->id)->where('is_active', 1)->paginate(8);
         return view('catalog.index', $data);
     }
 
