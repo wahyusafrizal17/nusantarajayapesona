@@ -53,8 +53,10 @@
       <div class="logo me-auto">
           <a href="/">
             <img src="{{ asset('assets/img/logo/nusantara.png') }}" alt=""> 
+            <span class="title-logo"></span>
+            <span class="title-sub-logo"></span>
           </a>
-          <h1 class="title-logo"></h1>
+          
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>

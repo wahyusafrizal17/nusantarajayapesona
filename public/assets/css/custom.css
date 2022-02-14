@@ -85,49 +85,28 @@
         height: auto;
     }
     .title-logo{
-        font-size: 16px !important;
+        font-size: 18px !important;
         position: absolute;
-        top: 11px !important;
+        top: 14px !important;
         left: 64px !important;
+        color: #5c768d;
+    }
+    .title-sub-logo{
+        font-size: 18px !important;
+        position: absolute;
+        top: 33px !important;
+        left: 64px !important;
+        color: #5c768d;
+    }
+    .title-logo::before{
+        content: "NUSANTARA JAYA";
+    }
+    .title-sub-logo::before{
+        content: "PESONA";
     }
 }
 
-@media(min-width:332px){
-    .title-logo {
-        font-size: 17px !important;
-        top: 9px !important;
-        left: 64px !important;
-    }
-}
-@media(min-width:345px){
-    .title-logo {
-        font-size: 20px !important;
-        top: 7px !important;
-        left: 64px !important;
-    }
-}
-@media(min-width:384px){
-    .title-logo {
-        font-size: 23px !important;
-        top: 7px !important;
-        left: 64px !important;
-    }
-}
-@media(min-width:422px){
-    .title-logo {
-        font-size: 25px !important;
-        top: 4px !important;
-        left: 64px !important;
-    }
-}
-@media(min-width:444px){
-    .title-logo {
-        font-size: 25px !important;
-        top: 4px !important;
-        left: 64px !important;
-    }
-}
-@media(min-width:445px) {
+@media(min-width:480px) {
     .slider-home{
         height: 300px !important;
     }
@@ -172,10 +151,17 @@
         padding-bottom: 0;
     }
     .title-logo{
-        font-size: 21px !important;
+        font-size: 22px !important;
         position: absolute;
-        top: 16px !important;
+        top: 18px !important;
         left: 64px !important;
+        color: #5c768d;
+    }
+    .title-logo::before{
+        content: "NUSANTARA JAYA PESONA";
+    }
+    .title-sub-logo::before{
+        content: "";
     }
 }
 
@@ -227,9 +213,11 @@
         padding-bottom: 10px;
     }
     .title-logo{
+        font-size: 25px !important;
         position: absolute;
-        top: 14px !important;
+        top: 16px !important;
         left: 130px !important;
+        color: #5c768d;
     }
     .image-product{
         height: 259px;
@@ -238,5 +226,11 @@
     .btn-selengkapnya a {
         font-size: 15px !important;
         font-weight: 600;
+    }
+    .title-logo::before{
+        content: "NUSANTARA JAYA PESONA";
+    }
+    .title-sub-logo::before{
+        content: "";
     }
 }
