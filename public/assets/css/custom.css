@@ -113,6 +113,13 @@
         left: 64px !important;
     }
 }
+@media(min-width:422px){
+    .title-logo {
+        font-size: 25px !important;
+        top: 4px !important;
+        left: 64px !important;
+    }
+}
 @media(min-width:444px){
     .title-logo {
         font-size: 25px !important;
@@ -120,7 +127,7 @@
         left: 64px !important;
     }
 }
-@media(min-width:480px) {
+@media(min-width:445px) {
     .slider-home{
         height: 300px !important;
     }
