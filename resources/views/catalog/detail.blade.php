@@ -112,6 +112,12 @@
                 </div>
             </div>
             @endforeach
+
+            <div class="btn-selengkapnya mt-3 text-center">
+              <a href="{{ route('category.list', $product->category->slug) }}" class="text-black">
+                Lihat semua product
+              </a>
+            </div>
           </div>
         </div>
 
