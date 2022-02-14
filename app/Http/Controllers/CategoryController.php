@@ -89,7 +89,14 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $input = $request->all();
+
         if($request->hasFile('images')){
+            $request->validate([
+                'images' => 'mimes:jpeg,jpg,png'
+            ],
+            [
+                'images.mimes' => 'Format gambar harus jpeg, jpg atau png',
+            ]);
             
             $file = $request->file('images');
             $fileName = $request->name_category.'.'.$file->extension();   

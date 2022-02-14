@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label for="">Sub image</label>
-        <input type="file" name="image[]" multiple>
+        <input type="file" name="image[]" accept="image/jpg, image/jpeg, image/png" multiple>
     </div>
 
     @if(!empty($product))

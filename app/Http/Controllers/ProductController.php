@@ -109,6 +109,13 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $input = $request->all();
         if($request->hasFile('images')){
+            $request->validate([
+                'images' => 'mimes:jpeg,jpg,png'
+            ],
+            [
+                'images.mimes' => 'Format gambar harus jpeg, jpg atau png',
+            ]);
+
             $file = $request->file('images');
             $fileName = Str::slug($request->name_product).'.'.$file->extension();    
             $destinationPath = 'assets/img/product';

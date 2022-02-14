@@ -25,7 +25,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name_category'               => 'required',
-            'images'                      => 'required',
+            'images'                      => 'required|mimes:jpeg,jpg,png',
         ];
     }
 
@@ -34,6 +34,7 @@ class StoreRequest extends FormRequest
         return [
             'name_category.required'               => 'Nama kategori tidak boleh kosong',
             'images.required'                      => 'Gambar tidak boleh kosong',
+            'images.mimes'                         => 'Format gambar harus jpeg, jpg atau png',
         ];
     }
 }

@@ -24,7 +24,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'images'                      => 'required',
+            'images'                      => 'required|mimes:jpeg,jpg,png',
         ];
     }
 
@@ -32,6 +32,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'images.required'                      => 'Gambar tidak boleh kosong',
+            'images.mimes'                         => 'Format gambar harus jpeg, jpg atau png',
         ];
     }
 }
