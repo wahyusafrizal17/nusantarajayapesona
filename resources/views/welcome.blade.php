@@ -112,23 +112,23 @@
         <div class="row mt-6">
           <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="fa fa-american-sign-language-interpreting"></i></div>
-            <h4 class="title"><a href="">INTEGRITAS</a></h4>
-            <p class="description">Bekerja dengan kualitas yang lebih baik: Pelanggan kami adalah prioritas dengan integritas, kami percaya dapat melayani customer dengan kualitas produk terbaik.</p>
+            <h4 class="title"><a href="">INTEGRITY</a></h4>
+            <p class="description">Work with better quality: Our customers are priority with the integrity, we believe that we can serve customers with the best quality of products.</p>
           </div>
           <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="fa fa-handshake-o"></i></div>
-            <h4 class="title"><a href="">KOMITMEN</a></h4>
-            <p class="description">Komitmen kami kpeada pemangku kepentingan terkait : Kami sangat peduli dan bersedia membantu mensejahterakan petani, masyarakat dan pemangku kepentingan terkait.</p>
+            <h4 class="title"><a href="">COMMITMENT</a></h4>
+            <p class="description">Our commitment to relevant stakeholders: We really care and  ready to develop the welfare of farmers, communities and related stakeholders.</p>
           </div>
           <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="fa fa-globe"></i></div>
-            <h4 class="title"><a href="">SUSTAINBLE</a></h4>
-            <p class="description">Kondisi berkelanjutan untuk kehidupan yang lebih baik : Alam sangat penting sehingga kami ingin memastikan generasi berikut nya masih bisa merasakan manfaat nya.</p>
+            <h4 class="title"><a href="">SUISTAINABLE</a></h4>
+            <p class="description">The conditions for a better life: Nature is so important that we want to make sure the next generation can get the benefit from it.</p>
           </div>
           <div class="col-lg-6 col-md-6 col-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="fa fa-signal"></i></div>
             <h4 class="title"><a href="">GROWTH</a></h4>
-            <p class="description">Always grow up to learn : Hingga saat ini dan seterusnya, kami masih belajar meningkatkan suplai kami agar sesuai dan solusi bagi kebutuhan pelanggan.</p>
+            <p class="description">Always grow up to learn : Now and beyond, we are still learning to develop our supply to suit and provide solutions for customer needs.</p>
           </div>
         </div>
 
