@@ -98,7 +98,7 @@
             <h3>New product</h3>
             
             @foreach ($products as $row)
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-md-4 col-4">
                   <a href="{{ route('catalog.detail', $row->slug) }}" class="text-black">
                     <img src="{{ asset('assets/img/product/'.$row->images) }}" alt="" width="100%">
