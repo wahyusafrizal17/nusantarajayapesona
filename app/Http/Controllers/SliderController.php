@@ -146,12 +146,14 @@ class SliderController extends Controller
     public function active($id)
     {
         $data = Slider::findOrFail($id);
-        if($data->is_active == 1){
-            $data->is_active = 0;
-        }else{
-            $data->is_active = 1;
+        if($data->status != "active"){
+            if($data->is_active == 1){
+                $data->is_active = 0;
+            }else{
+                $data->is_active = 1;
+            }
+            $data->save();
         }
-        $data->save();
 
         return redirect('administration/slider');
     }
