@@ -2,7 +2,7 @@
 @section('content')
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" class="slider-home">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -151,7 +151,7 @@
             <div class="member product">
               <div class="pic">
                 <a href="{{ route('category.list', $category->slug) }}">
-                <img src="{{ asset('assets/img/category/'.$category->images) }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/category/'.$category->images) }}" class="img-fluid image-product" alt="">
               </a>
               </div>
             </div>

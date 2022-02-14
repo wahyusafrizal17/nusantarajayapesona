@@ -1,9 +1,15 @@
 @media(min-width:200px) {
+    .slider-home{
+        height: 250px !important;
+    }
+    .detail-catalog{
+        height: 200px !important;
+    }
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 250px !important;
     }
-    #hero, #hero .carousel-item {
+    #hero .carousel-item {
         height: 250px !important;
     }
     #hero .carousel-inner .img-detail-slide, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
@@ -11,7 +17,7 @@
         height: 200px !important;
         object-fit: cover;
     }
-    #hero, #hero .img-detail-slide {
+    #hero .img-detail-slide {
         height: 200px !important;
         object-fit: cover;
     }
@@ -87,11 +93,14 @@
 }
 
 @media(min-width:480px) {
+    .slider-home{
+        height: 300px !important;
+    }
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
         height: 300px;
     }
-    #hero, #hero .carousel-item {
+    #hero .carousel-item {
         height: 300px;
     }
     .about {
@@ -136,12 +145,15 @@
 }
 
 @media(min-width:768px) {
+    .slider-home{
+        height: 600px !important;
+    }
     .detail-catalog{
         height: 420px !important;
     }
     #hero .carousel-inner .carousel-item, #hero .carousel-inner .active.carousel-item-start, #hero .carousel-inner .active.carousel-item-end{
         background-size: cover;
-        height: 600px;
+        height: 600px !important;
     }
     #hero .carousel-item {
         height: 600px;
@@ -159,15 +171,15 @@
         width: 100%;
     }
     .img-catalog{
-        height: 180px;
+        height: 150px;
         object-fit: cover;
     }
     .title-product h4 {
-        font-size: 19px;
+        font-size: 19px !important;
         font-weight: 600;
     }
     .title-product{
-        padding-top: 30px
+        padding-top: 55px
     }
     .team .product{
         height: 125px;
@@ -176,12 +188,20 @@
         font-size: 15px;
     }
     .title-catalog{
-        padding-top: 112px;
+        padding-top: 155px;
         padding-bottom: 10px;
     }
     .title-logo{
         position: absolute;
         top: 14px !important;
         left: 130px !important;
+    }
+    .image-product{
+        height: 259px;
+        object-fit: cover;
+    }
+    .btn-selengkapnya a {
+        font-size: 15px !important;
+        font-weight: 600;
     }
 }

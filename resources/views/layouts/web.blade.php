@@ -51,12 +51,10 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1>
           <a href="/">
-            <img src="{{ asset('assets/img/logo/nusantara.png') }}" alt="">
+            <img src="{{ asset('assets/img/logo/nusantara.png') }}" alt=""> 
           </a>
-          {{-- <h1 class="title-logo">NUSANTARA JAYA PESONA</h1> --}}
-        </h1>
+          <h1 class="title-logo">NUSANTARA JAYA PESONA</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
