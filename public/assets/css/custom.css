@@ -92,9 +92,23 @@
     }
 }
 
-@media(min-width:332px) {
+@media(min-width:332px){
     .title-logo {
-        font-size: 18px !important;
+        font-size: 17px !important;
+        top: 9px !important;
+        left: 64px !important;
+    }
+}
+@media(min-width:345px){
+    .title-logo {
+        font-size: 20px !important;
+        top: 7px !important;
+        left: 64px !important;
+    }
+}
+@media(min-width:384px){
+    .title-logo {
+        font-size: 23px !important;
         top: 7px !important;
         left: 64px !important;
     }
