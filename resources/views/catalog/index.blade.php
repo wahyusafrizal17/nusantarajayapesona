@@ -27,7 +27,7 @@
           
           <div class="btn-selengkapnya">
             <a href="{{ route('catalog.detail', $product->slug) }}" class="text-black">
-              Lihat selengkapnya
+              view more
             </a>
           </div>
           

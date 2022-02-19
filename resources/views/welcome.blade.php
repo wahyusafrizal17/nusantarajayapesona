@@ -160,7 +160,7 @@
             </div>
             <div class="btn-selengkapnya">
               <a href="{{ route('category.list', $category->slug) }}" class="text-black">
-                Lihat selengkapnya
+                view more
               </a>
             </div>
           </div>
