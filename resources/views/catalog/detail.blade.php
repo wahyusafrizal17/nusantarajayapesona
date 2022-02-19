@@ -115,7 +115,7 @@
 
             <div class="btn-selengkapnya mt-3 text-center">
               <a href="{{ route('category.list', $product->category->slug) }}" class="text-black">
-                Lihat semua product
+                view all products
               </a>
             </div>
           </div>
